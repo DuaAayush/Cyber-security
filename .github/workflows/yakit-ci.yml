@@ -71,22 +71,7 @@ jobs:
           yarn add -D dmg-license && yarn electron-publish
       - name: View Published Content
         run: ls ./release
-        #        Yakit-1.0.9-darwin-arm64.dmg
-        #        Yakit-1.0.9-darwin-arm64.dmg.blockmap
-        #        Yakit-1.0.9-darwin-x64.dmg
-        #        Yakit-1.0.9-darwin-x64.dmg.blockmap
-        #        Yakit-1.0.9-linux-amd64.AppImage
-        #        Yakit-1.0.9-windows-amd64.exe
-        #        Yakit-1.0.9-windows-amd64.exe.blockmap
-        #        builder-debug.yml
-        #        latest-linux.yml
-        #        latest-mac.yml
-        #        latest.yml
-        #        linux-unpacked
-        #        mac
-        #        mac-arm64
-        #        win-unpacked
-
+        
       - name: Upload Yakit Artifacts Windows
         uses: actions/upload-artifact@v2
         if: ${{ startsWith(github.ref, 'refs/tags/v') || startsWith(github.ref, 'refs/heads/ci/community-') }}
